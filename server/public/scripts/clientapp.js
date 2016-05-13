@@ -15,7 +15,7 @@ $(document).ready(function() {
         if(response == true) {
           getCats();
         } else {
-          alert("Something went wrong");
+          alert("Duplicate or invalid cat name - input rejected.\nPlease try again.");
         }
       }
     })

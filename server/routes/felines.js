@@ -22,9 +22,13 @@ router.post('/', function (req, res) {
   }
 
   // If no duplicate found, add to array
-  if (!found) { cats.push(req.body.catName); }
+  if (!found) {
+    cats.push(req.body.catName);
+    res.send(true);
+  } else {
+    res.send(false);
+  }
 
-  res.send(true);
 });
 
 module.exports = router;
